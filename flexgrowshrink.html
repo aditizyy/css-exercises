@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Grow / Shrink / Basis</title>
+  <style>
+    .container {
+      display: flex;
+      border: 2px solid black;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .box {
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    .grow-box {
+      background: steelblue;
+      flex: 1; /* grow equally */
+    }
+
+    .shrink-box {
+      background: tomato;
+      flex: 1 0 auto; /* grow, don’t shrink, use content size */
+      white-space: nowrap; /* avoid text wrapping */
+    }
+
+    .basis-box {
+      background: mediumseagreen;
+      flex: 0 1 200px; /* don’t grow, can shrink, basis is 200px */
+    }
+
+    .auto-box {
+      background: rebeccapurple;
+      flex: auto; /* flex: 1 1 auto */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Flexbox Sizing Demo</h2>
+
+  <div class="container">
+    <div class="box grow-box">flex: 1</div>
+    <div class="box shrink-box">flex: 1 0 auto (no shrink)</div>
+    <div class="box basis-box">flex: 0 1 200px</div>
+    <div class="box auto-box">flex: auto</div>
+  </div>
+
+</body>
+</html>
