@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Normal vs Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid #555;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .normal-container .box {
+            display: block;
+            /* default behavior */
+            background-color: lightcoral;
+            margin: 5px 0;
+            padding: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            /*You apply display: flex to the parent (the container), so that its direct children (the .box elements) become flex items and are arranged using flex rules.*/
+            gap: 11px;
+            /* space between flex items */
+        }
+
+        .flex-container .box {
+            background-color: lightseagreen;
+            padding: 10px;
+            flex: 1;
+            /* items grow to fill the container equally */
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🧱 Normal Container (Block)</h2>
+    <div class="container normal-container"> <!-- THIS DIV HAS 2 CLASSES - container and normal-container -->
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <h2>📐 Flex Container</h2>
+    <div class="container flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+</body>
+
+</html>
