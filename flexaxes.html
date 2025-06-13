@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      border: 2px solid #333;
+      margin: 20px;
+      padding: 10px;
+      height: 300px; /* required for column example to work well */
+    }
+
+    .row-direction {
+      flex-direction: row;
+    }
+
+    .column-direction {
+      flex-direction: column;
+    }
+
+    .box {
+      background-color: lightblue;
+      border: 1px solid navy;
+      padding: 20px;
+      margin: 5px;
+      flex: 1 1 auto ; /* try changing to just 'flex: 1' and observe what breaks */
+    }
+  </style>
+</head>
+<body>
+
+  <h3>🧱 flex-direction: row (default)</h3>
+  <div class="container row-direction">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <h3>📐 flex-direction: column</h3>
+  <div class="container column-direction">
+    <div class="box">Box A</div>
+    <div class="box">Box B</div>
+    <div class="box">Box C</div>
+  </div>
+
+</body>
+</html>
